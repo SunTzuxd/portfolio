@@ -1,0 +1,20 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.div1{
+    display: flex;
+    h1{
+        margin-right: 0px;
+    }
+}
+
+.nav-item{ 
+    color: red;
+}
