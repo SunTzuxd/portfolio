@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The art of learning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/litera/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+		<a class="navbar-brand" href="../index.html">SunTzu</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarColor03">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="./tareas.html">Tareas</a><span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" id="searchQuery" type="text" placeholder="Buscar...">
+				<button class="btn btn-primary" type="submit" onclick="searchButton()">Buscar</button>
+			</form>
+		</div>
+    </nav>
+    <section>
+        <div class="container">
+            <h1 class="heading">Mis tareas</h1>
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Proyecto Integrador</div>
+                <div class="card-body">
+                  <h4 class="card-title">Formularios</h4>
+                  <p class="card-text">Crear un formulario para calcular planillas.</p>
+                  <button id="formularios" type="button" class="btn btn-primary">Ver</button>
+                </div>
+              </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Pago de personal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <h6>Datos del trabajador</h6>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombres" id="nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Apellidos" id="apellido">
+                        </div>
+                        <h6 style="margin-top: 0.5rem;">Pago por hora</h6>
+                        <div class="form-group">
+                            <select class="form-control" id="pagoHora">
+                                <option value="20">20 soles</option>
+                                <option value="30">30 soles</option>
+                                <option value="40">40 soles</option>
+                                <option value="50">50 soles</option>
+                            </select>
+                        </div>
+                        <h6 style="margin-top: 0.5rem;">Descuentos</h6>
+                        <input id="onp" type="checkbox"> ONP (13%)<br>
+                        <input id="essalud" type="checkbox"> ESSALUD (120.52 soles) <br>
+                        <h6 style="margin-top: 0.5rem;">Bonificación</h6>
+                        <div class="form-group">
+                            <select class="form-control" id="bonificacion">
+                                <option value="0.1">10%</option>
+                                <option value="0.2">20%</option>
+                                <option value="0.3">30%</option>
+                            </select>
+                        </div>
+                        <h6 style="margin-top: 0.5rem;">Salario</h6>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="text" readonly="" class="form-control-plaintext" id="pagoFinal" value="0.00">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                <button id="calcular" type="button" class="btn btn-primary">Calcular</button>
+                <button id="limpiar" type="button" class="btn btn-secondary" data-dismiss="modal">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../scripts/tareas.js"></script>
+</html>
