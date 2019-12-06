@@ -29,14 +29,18 @@ window.onclick = function(event) {
   }
 }
 
-let btncalcular = document.getElementById("calcular");
+let btnCalcular = document.getElementById("calcular");
+let btnBorrar = document.getElementById("limpiar");
+let btnVerCodigo = document.getElementById("code");
+let nom = document.getElementById("nombre");
+let apell = document.getElementById("apellido");
 let pH = document.getElementById("pagoHora");
 let descuento1 = document.getElementById("onp");
 let descuento2 = document.getElementById("essalud");
 let bon = document.getElementById("bonificacion");
 let pagoFinal = document.getElementById("pagoFinal");
 
-btncalcular.onclick = () => {
+btnCalcular.onclick = () => {
   let pagoHora = pH.value;
   let onp = descuento1.checked ? 0.13:0;
   let essalud = descuento2.checked ? 120.52:0;
@@ -45,4 +49,16 @@ btncalcular.onclick = () => {
   pago = pago - pago*onp - essalud + pago*bonificacion;
   pagoFinal.value = pago + " soles";
   // console.log(pago); para testear
+}
+
+btnBorrar.onclick = () => {
+  nom.value = "";
+  apell.value = "";
+  descuento1.value = false;
+  descuento2.value = false;
+  pagoFinal.value = "0.00";
+}
+
+btnVerCodigo.onclick = () => {
+  window.open("https://github.com/SunTzuxd/portfolio");
 }
